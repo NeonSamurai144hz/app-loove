@@ -1,0 +1,59 @@
+<div class="login-container">
+    <div class="login-header">
+        <div class="logo-container">
+            <img src="/frontend/assets/img/logo.png" alt="Sweep logo" class="login-logo">
+        </div>
+    </div>
+
+    <div class="social-login">
+        <button class="social-btn facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </button>
+        <button class="social-btn google">
+            <i class="fa-brands fa-google"></i>
+        </button>
+        <button class="social-btn apple">
+            <i class="fa-brands fa-apple"></i>
+        </button>
+    </div>
+
+    <div class="login-divider">
+        <span>OR</span>
+    </div>
+
+    <div class="email-login">
+        <button class="email-btn cta-btn btn-primary" id="email-signup-btn">Sign up with email</button>
+    </div>
+
+    <div class="login-footer">
+        <p>Existing account? <a href="#" id="login-link">Log in</a></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('email-signup-btn').addEventListener('click', function() {
+        router.navigate('register');
+    });
+
+    document.getElementById('login-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        const loginForm = `
+      <div class="container">
+        <h2>Log In</h2>
+        <form id="login-form">
+          <ul>
+            <li><input type="text" placeholder="Username" class="username" required></li>
+            <li><input type="password" placeholder="Password" class="password" required></li>
+            <li><button type="submit" class="submit">Login</button></li>
+          </ul>
+        </form>
+      </div>
+    `;
+        document.querySelector('.login-container').innerHTML = loginForm;
+
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login logic would be processed here');
+        });
+    });
+</script>
