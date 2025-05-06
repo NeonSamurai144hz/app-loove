@@ -1,0 +1,72 @@
+/* Base styles */
+* {
+    padding: 5px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #0F1BFF;
+}
+
+/* custom body backgrounds for each page*/
+body.landing-page {
+    background-color: #FFFFFF;
+}
+
+body:not(.landing-page) {
+    background-color: #FFFFFF;
+}
+
+/* Form elements */
+li {
+    list-style-type: none;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+input {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    text-align: left;
+    color: #0F1BFF;
+}
+
+/* Form containers */
+.container {
+    font-family: sans-serif;
+    border: 2px solid #0F1BFF;
+    width: 24%;
+    text-align: center;
+    margin: auto;
+    border-radius: 12px;
+    background-color: white;
+    padding-bottom: 10px;
+    box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* Form buttons */
+.submit {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    width: 50%;
+    font-size: 18px;
+    transition: 0.9s ease;
+    text-align: center;
+}
+
+.submit:hover {
+    background-color: #0F1BFF;
+    color: white;
+}
+
+.password, .username {
+    width: 50%;
+    color : black;
+}
