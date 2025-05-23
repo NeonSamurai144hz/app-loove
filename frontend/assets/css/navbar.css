@@ -1,0 +1,273 @@
+#navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 50px;
+    background: #eaefff;
+    transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 9999;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(15, 27, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0F1BFF;
+}
+
+/* Add CSS-only hover support as backup */
+#navbar:hover {
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 6px 25px rgba(15, 27, 255, 0.35);
+}
+
+#navbar.navbar-expanded {
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 6px 25px rgba(15, 27, 255, 0.35);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+#navbar:hover .navbar-content,
+#navbar.navbar-expanded .navbar-content {
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 36px;
+    width: 120px;
+}
+
+/* Make brand container take full width in collapsed state */
+.navbar-collapsed .navbar-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Logo layers */
+.logo-layer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    white-space: nowrap;
+}
+
+/* Center logo text in collapsed state */
+.navbar-collapsed .logo-layer {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.navbar-collapsed .logo-layer-1 {
+    opacity: 1;
+    visibility: visible;
+    color: #0F1BFF;
+    font-size: 22px;
+    text-shadow: 0 0 1px rgba(15, 27, 255, 0.5);
+    text-align: center;
+    width: 100%;
+}
+
+/* Make logo layers visible in collapsed state for logo effect */
+.navbar-collapsed .logo-layer-2 {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translate(calc(-50% - 4px), -50%);
+    color: #FF9900;
+}
+
+.navbar-collapsed .logo-layer-3 {
+    visibility: visible;
+    opacity: 0.8;
+    transform: translate(calc(-50% - 8px), -50%);
+    color: #FF0099;
+}
+
+/* Adjust logo position in expanded state */
+#navbar.navbar-expanded .logo-layer,
+#navbar:hover .logo-layer {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.logo-layer-1 {
+    z-index: 3;
+    color: #0F1BFF;
+    text-shadow: 0 0 1px rgba(15, 27, 255, 0.5);
+}
+
+.logo-layer-2 {
+    z-index: 2;
+    color: #FF9900;
+    opacity: 0;
+    transform: translate(-5px, -50%);
+    text-shadow: 0 0 1px rgba(255, 153, 0, 0.5);
+    visibility: hidden;
+    left: 0;
+}
+
+.logo-layer-3 {
+    z-index: 1;
+    color: #FF0099;
+    opacity: 0;
+    transform: translate(-10px, -50%);
+    text-shadow: 0 0 1px rgba(255, 0, 153, 0.5);
+    visibility: hidden;
+    left: 0;
+}
+
+#navbar:hover .logo-layer-2,
+#navbar.navbar-expanded .logo-layer-2 {
+    opacity: 0.8;
+    transform: translate(-4px, -50%);
+    left: 0;
+    transition-delay: 0.05s;
+    visibility: visible;
+}
+
+#navbar:hover .logo-layer-3,
+#navbar.navbar-expanded .logo-layer-3 {
+    opacity: 0.8;
+    transform: translate(-8px, -50%);
+    left: 0;
+    transition-delay: 0.1s;
+    visibility: visible;
+}
+
+.logo-text {
+    width: 80px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    display: none;
+    margin-left: 30px;
+}
+
+#navbar.navbar-expanded .logo-text,
+#navbar:hover .logo-text {
+    opacity: 1;
+    display: block;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar-menu li {
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#navbar.navbar-expanded .navbar-menu li,
+#navbar:hover .navbar-menu li {
+    opacity: 1;
+}
+
+#navbar.navbar-expanded .navbar-menu li:nth-child(2),
+#navbar:hover .navbar-menu li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+#navbar.navbar-expanded .navbar-menu li:nth-child(3),
+#navbar:hover .navbar-menu li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+#navbar.navbar-expanded .navbar-menu li:nth-child(4),
+#navbar:hover .navbar-menu li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+#navbar .navbar-menu a {
+    color: #0F1BFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100%;
+    line-height: normal;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navbar .navbar-menu a i {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar .navbar-menu a span {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#navbar.navbar-expanded .navbar-menu a span,
+#navbar:hover .navbar-menu a span {
+    display: inline;
+    opacity: 1;
+}
+
+/* Make room for content under floating navbar */
+body {
+    padding-top: 20px;
+}
+
+/* Handle mobile view */
+@media (max-width: 768px) {
+    #navbar.navbar-expanded,
+    #navbar:hover {
+        width: 90%;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+    }
+
+    .logo-layer {
+        font-size: 16px;
+    }
+}

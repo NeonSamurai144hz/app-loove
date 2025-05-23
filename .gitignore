@@ -1,1 +1,11 @@
-/sweep_db.sql
+# IDE files
+.idea/
+
+# Dependencies
+/vendor/
+composer.lock
+
+# Database
+sweep_db.sql
+
+/src/

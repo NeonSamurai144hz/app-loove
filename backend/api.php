@@ -1,8 +1,9 @@
 // backend/api.php
 <?php
-require_once(__DIR__ . '/Router.php');
-require_once(__DIR__ . '/Database.php');
-require_once(__DIR__ . '/controllers/AuthController.php');
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use App\Controllers\AuthController;
+use App\Database;
 
 // Get URL from request
 $url = isset($_GET['url']) ? $_GET['url'] : '';

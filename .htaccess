@@ -1,0 +1,25 @@
+# Turn rewrite engine on
+RewriteEngine On
+
+# Root URL to frontend/index.php
+RewriteRule ^$ frontend/index.php [L]
+
+# Serve existing files directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Serve existing directories directly
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Disable directory listings
+Options -Indexes
+
+# Handle API requests
+RewriteRule ^api/(.*)$ backend/api.php?url=$1 [QSA,L]
+
+# Handle admin routes
+RewriteRule ^admin/(.*)$ backend/admin.php?url=$1 [QSA,L]
+
+# SPA routing - all other routes
+RewriteRule ^(.*)$ frontend/index.php [QSA,L]

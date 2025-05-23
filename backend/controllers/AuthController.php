@@ -1,5 +1,8 @@
 <?php
-require_once(__DIR__ . '/../models/User.php');
+namespace App\Controllers;
+
+use App\Models\User;
+use PDO;
 
 class AuthController {
     private $db;

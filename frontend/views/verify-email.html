@@ -1,0 +1,142 @@
+<div class="verify-container">
+    <div class="verify-header">
+        <div class="logo-container">
+            <img src="/assets/img/logo.png" alt="Sweep logo" class="login-logo">
+        </div>
+        <h2>Verify Your Email</h2>
+        <p>We've sent a verification code to your email address.</p>
+    </div>
+
+    <form id="verify-form" class="auth-form">
+        <div class="form-group">
+            <input type="text" id="verification-code" name="code" placeholder="Enter verification code" required maxlength="6">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="cta-btn btn-primary">Verify Email</button>
+        </div>
+        <div id="verify-message" class="form-message"></div>
+        <div class="form-link">
+            <a href="#" onclick="resendVerificationCode(); return false;">Resend code</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const verifyForm = document.getElementById('verify-form');
+        if (verifyForm) {
+            verifyForm.addEventListener('submit', handleVerification);
+        }
+    });
+    
+    function handleVerification(e) {
+        e.preventDefault();
+        
+        const code = document.getElementById('verification-code').value;
+        const messageElement = document.getElementById('verify-message');
+        
+        // Clear previous messages
+        messageElement.textContent = '';
+        messageElement.className = 'form-message';
+        
+        // Validate input
+        if (!code) {
+            messageElement.textContent = 'Please enter the verification code';
+            messageElement.classList.add('error-message');
+            return;
+        }
+        
+        // Show loading state
+        const submitButton = verifyForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Verifying...';
+        submitButton.disabled = true;
+        
+        // Send verification request to API
+        fetch('/backend/api.php?url=auth/verify', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                code: code,
+                email: localStorage.getItem('pending_verification_email')
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Verification successful
+                messageElement.textContent = 'Email verified successfully! Redirecting to login...';
+                messageElement.classList.add('success-message');
+                
+                // Clear pending verification email
+                localStorage.removeItem('pending_verification_email');
+                
+                // Redirect to login page after a short delay
+                setTimeout(() => {
+                    router.navigate('login');
+                }, 2000);
+            } else {
+                // Verification failed
+                messageElement.textContent = data.message || 'Verification failed. Please try again.';
+                messageElement.classList.add('error-message');
+                
+                // Reset button state
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Verification error:', error);
+            messageElement.textContent = 'An error occurred. Please try again later.';
+            messageElement.classList.add('error-message');
+            
+            // Reset button state
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        });
+    }
+    
+    function resendVerificationCode() {
+        const messageElement = document.getElementById('verify-message');
+        const email = localStorage.getItem('pending_verification_email');
+        
+        if (!email) {
+            messageElement.textContent = 'No pending verification found. Please register again.';
+            messageElement.classList.add('error-message');
+            setTimeout(() => {
+                router.navigate('register');
+            }, 2000);
+            return;
+        }
+        
+        // Show loading state
+        messageElement.textContent = 'Resending verification code...';
+        messageElement.className = 'form-message';
+        
+        // Request new verification code
+        fetch('/backend/api.php?url=auth/resend-verification', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                messageElement.textContent = 'New verification code sent! Please check your email.';
+                messageElement.classList.add('success-message');
+            } else {
+                messageElement.textContent = data.message || 'Failed to resend verification code.';
+                messageElement.classList.add('error-message');
+            }
+        })
+        .catch(error => {
+            console.error('Resend error:', error);
+            messageElement.textContent = 'An error occurred. Please try again later.';
+            messageElement.classList.add('error-message');
+        });
+    }
+</script> 

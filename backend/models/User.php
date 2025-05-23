@@ -1,5 +1,9 @@
 <?php
-require_once 'backend/Database.php';
+namespace App\Models;
+
+use App\Database;
+use PDO;
+use PDOException;
 
 class User {
     public static function getAllUsers() {

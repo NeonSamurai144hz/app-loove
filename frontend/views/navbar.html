@@ -1,0 +1,92 @@
+<!-- frontend/views/navbar.html -->
+<nav id="navbar" class="navbar-collapsed">
+  <div class="navbar-content">
+    <div class="navbar-brand">
+      <div class="logo-layer logo-layer-1">Sweep</div>
+      <div class="logo-layer logo-layer-2">Sweep</div>
+      <div class="logo-layer logo-layer-3">Sweep</div>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#" onclick="router.navigate('home'); return false;"><i class="fas fa-home"></i> <span>Home</span></a></li>
+      <li><a href="#" onclick="router.navigate('profile'); return false;"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+      <li><a href="#" onclick="router.navigate('matches'); return false;"><i class="fas fa-heart"></i> <span>Matches</span></a></li>
+      <li><a href="#" onclick="router.navigate('login'); return false;"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+  // Immediately attach hover events to navbar
+  (function() {
+    const navbarSetup = function() {
+      const nav = document.getElementById('navbar');
+      let isTransitioning = false;
+      let hoverTimer = null;
+      let leaveTimer = null;
+      
+      if (nav) {
+        // Add hover event handlers
+        nav.addEventListener('mouseenter', function() {
+          // Clear any pending leave timer
+          if (leaveTimer) {
+            clearTimeout(leaveTimer);
+            leaveTimer = null;
+          }
+          
+          // Don't start a new transition if already transitioning
+          if (isTransitioning) return;
+          
+          isTransitioning = true;
+          
+          // Small delay before expanding to prevent rapid state changes
+          hoverTimer = setTimeout(() => {
+            // Apply smooth transition
+            nav.style.transition = 'all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            nav.classList.remove('navbar-collapsed');
+            nav.classList.add('navbar-expanded');
+            
+            // Clear transitioning flag after animation completes
+            setTimeout(() => {
+              isTransitioning = false;
+            }, 700);
+          }, 100);
+        });
+        
+        nav.addEventListener('mouseleave', function() {
+          // Clear any pending hover timer
+          if (hoverTimer) {
+            clearTimeout(hoverTimer);
+            hoverTimer = null;
+          }
+          
+          // Don't start a new transition if already transitioning
+          if (isTransitioning) return;
+          
+          isTransitioning = true;
+          
+          // Small delay before collapsing
+          leaveTimer = setTimeout(() => {
+            nav.classList.remove('navbar-expanded');
+            nav.classList.add('navbar-collapsed');
+            
+            // Add a subtle transition effect when collapsing (slower)
+            nav.style.transition = 'all 1s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            
+            // Clear transitioning flag after animation completes
+            setTimeout(() => {
+              nav.style.transition = '';
+              isTransitioning = false;
+            }, 1000);
+          }, 100);
+        });
+        
+        console.log('Navbar event listeners attached');
+      } else {
+        // If navbar isn't ready yet, try again in a moment
+        setTimeout(navbarSetup, 100);
+      }
+    };
+    
+    // Start the setup process
+    navbarSetup();
+  })();
+</script>
