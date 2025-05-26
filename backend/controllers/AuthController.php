@@ -1,5 +1,7 @@
 <?php
-require_once(__DIR__ . '/../models/User.php');
+namespace App\Controllers;
+
+use App\Models\User;
 
 class AuthController {
     private $db;
@@ -8,71 +10,186 @@ class AuthController {
         $this->db = $database;
     }
 
+    // input sanitization helper
+    private function cleanInput($data) {
+        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+    }
+
     public function login() {
-        // Existing login code...
+        error_log("AuthController: login() called\n", 3, __DIR__ . '/../debug.log');
+
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            $this->respondJson(['success' => false, 'message' => 'Invalid request method'], 405);
+        }
+
+        $input = file_get_contents('php://input');
+        error_log("AuthController: Login raw input: $input\n", 3, __DIR__ . '/../debug.log');
+        $data = json_decode($input, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->respondJson(['success' => false, 'message' => 'Invalid JSON'], 400);
+        }
+
+        if (empty($data['email']) || empty($data['password'])) {
+            $this->respondJson(['success' => false, 'message' => 'Email and password required'], 400);
+        }
+
+        $email = $this->cleanInput($data['email']);
+        $password = $this->cleanInput($data['password']);
+
+        $user = \App\Models\User::findByEmail($email);
+
+        if (!$user || !password_verify($password, $user['password'])) {
+            $this->respondJson(['success' => false, 'message' => 'Invalid credentials'], 401);
+        }
+
+        session_start();
+        session_regenerate_id(true);
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_email'] = $user['email'];
+
+        error_log("AuthController: Login successful for user ID: " . $user['id'] . "\n", 3, __DIR__ . '/../debug.log');
+
+        $token = bin2hex(random_bytes(32));
+        $this->respondJson([
+            'success' => true,
+            'token' => $token,
+            'user' => [
+                'id' => $user['id'],
+                'email' => $user['email'],
+                'first_name' => $user['first_name'],
+                'last_name' => $user['last_name']
+            ]
+        ]);
     }
 
     public function register() {
-        // Get JSON data from request
-        $data = json_decode(file_get_contents('php://input'), true);
+        error_log("AuthController: register() called\n", 3, __DIR__ . '/../debug.log');
 
-        // Validate required fields
-        $requiredFields = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
-        foreach ($requiredFields as $field) {
-            if (empty($data[$field])) {
-                $this->respondJson(['success' => false, 'message' => 'All fields are required']);
-                return;
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            $this->respondJson(['success' => false, 'message' => 'Invalid request method'], 405);
+        }
+
+        $data = [];
+        $file = null;
+        if (isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'multipart/form-data') !== false) {
+            foreach ($_POST as $k => $v) {
+                $data[$k] = $this->cleanInput($v);
+            }
+            if (isset($_FILES['profilePhoto'])) {
+                $file = $_FILES['profilePhoto'];
+            }
+        } else {
+            $input = file_get_contents('php://input');
+            $data = json_decode($input, true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                $this->respondJson(['success' => false, 'message' => 'Invalid JSON'], 400);
+            }
+            foreach ($data as $k => $v) {
+                $data[$k] = $this->cleanInput($v);
             }
         }
 
-        // Validate email format
+        $requiredFields = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
+        foreach ($requiredFields as $field) {
+            if (empty($data[$field])) {
+                $this->respondJson(['success' => false, 'message' => 'All fields are required'], 400);
+            }
+        }
+
         if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->respondJson(['success' => false, 'message' => 'Invalid email format']);
-            return;
+            $this->respondJson(['success' => false, 'message' => 'Invalid email'], 400);
         }
 
-        // Validate password match
         if ($data['password'] !== $data['confirmPassword']) {
-            $this->respondJson(['success' => false, 'message' => 'Passwords do not match']);
-            return;
+            $this->respondJson(['success' => false, 'message' => 'Passwords do not match'], 400);
         }
 
-        // Check if email already exists
-        if (User::findByEmail($data['email'])) {
-            $this->respondJson(['success' => false, 'message' => 'Email already registered']);
-            return;
+        if (strlen($data['password']) < 6) {
+            $this->respondJson(['success' => false, 'message' => 'Password must be at least 6 characters'], 400);
         }
 
-        // Create new user
-        $userId = User::create([
+        if (\App\Models\User::findByEmail($data['email'])) {
+            $this->respondJson(['success' => false, 'message' => 'Email already registered'], 409);
+        }
+
+        // File validation
+        $photoPath = null;
+        if ($file && $file['error'] === UPLOAD_ERR_OK) {
+            $maxFileSize = 2 * 1024 * 1024; // 2MB
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+
+            if ($file['size'] > $maxFileSize) {
+                $this->respondJson(['success' => false, 'message' => 'Profile photo too large (max 2MB)'], 400);
+            }
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $mimeType = finfo_file($finfo, $file['tmp_name']);
+            finfo_close($finfo);
+            if (!in_array($mimeType, $allowedTypes)) {
+                $this->respondJson(['success' => false, 'message' => 'Invalid image type'], 400);
+            }
+            $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+            $filename = uniqid('pfp_', true) . '.' . $ext;
+            $uploadDir = __DIR__ . '/../../uploads/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+            $photoPath = $uploadDir . $filename;
+            move_uploaded_file($file['tmp_name'], $photoPath);
+        }
+
+        $userId = \App\Models\User::create([
             'first_name' => $data['firstName'],
             'last_name' => $data['lastName'],
             'email' => $data['email'],
             'password' => password_hash($data['password'], PASSWORD_DEFAULT),
-            'date_birth' => $data['birthDate'] ?? '2000-01-01', // Default or from form
-            'gender' => $data['gender'] ?? 'other', // Default or from form
-            'gender_attraction' => $data['genderAttraction'] ?? 'all', // Default or from form
-            'age_attraction_min' => $data['ageMin'] ?? 18, // Default or from form
-            'age_attraction_max' => $data['ageMax'] ?? 99 // Default or from form
+            'date_birth' => $data['birthDate'] ?? null,
+            'gender' => $data['gender'] ?? null,
+            'gender_attraction' => $data['genderAttraction'] ?? null,
+            'age_attraction_min' => $data['ageMin'] ?? 18,
+            'age_attraction_max' => $data['ageMax'] ?? 99,
+            'pfp_path' => $photoPath
         ]);
 
         if ($userId) {
-            // Generate session token
-            $token = bin2hex(random_bytes(32));
-
-            $this->respondJson([
-                'success' => true,
-                'message' => 'Registration successful',
-                'token' => $token,
-                'user_id' => $userId
-            ]);
+            $this->respondJson(['success' => true, 'user_id' => $userId]);
         } else {
-            $this->respondJson(['success' => false, 'message' => 'Registration failed']);
+            $this->respondJson(['success' => false, 'message' => 'Registration failed'], 500);
         }
     }
 
-    private function respondJson($data) {
+    public function me() {
+        error_log("AuthController: me() called\n", 3, __DIR__ . '/../debug.log');
+        session_start();
+        if (empty($_SESSION['user_id'])) {
+            $this->respondJson(['success' => false, 'message' => 'Not authenticated'], 401);
+            return;
+        }
+        $user = \App\Models\User::findByEmail($_SESSION['user_email']);
+        if (!$user) {
+            $this->respondJson(['success' => false, 'message' => 'User not found'], 404);
+            return;
+        }
+        unset($user['password']);
+        $user['photo_url'] = $user['pfp_path']
+            ? '/uploads/' . basename($user['pfp_path'])
+            : '/assets/img/sample-profile.jpg';
+        $this->respondJson(['success' => true, 'user' => $user]);
+    }
+
+    public function updateProfile() {
+        session_start();
+        if (empty($_SESSION['user_id'])) {
+            $this->respondJson(['success' => false, 'message' => 'Not authenticated'], 401);
+            return;
+        }
+        // not coded yet
+    }
+
+    private function respondJson($data, $statusCode = 200) {
+        http_response_code($statusCode);
         header('Content-Type: application/json');
         echo json_encode($data);
+        exit();
     }
 }

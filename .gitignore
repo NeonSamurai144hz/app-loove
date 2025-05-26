@@ -1,1 +1,5 @@
 /sweep_db.sql
+composer.lock
+/vendor/
+frontend/uploads
+uploads/
