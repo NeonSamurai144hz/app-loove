@@ -2,15 +2,58 @@
     <div class="header">
         <h1>Register</h1>
     </div>
-
-    <form name="register" method="post">
-        <ul>
+    <form name="register" id="register-form" method="post">
+        <ul id="register-step-1">
             <li>First Name: <input type="text" name="firstName" required></li>
             <li>Last Name: <input type="text" name="lastName" required></li>
             <li>Email: <input type="email" name="email" required></li>
             <li>Password: <input type="password" name="password" required></li>
             <li>Confirm Password: <input type="password" name="confirmPassword" required></li>
         </ul>
-        <input type="submit" class="submit" value="Register" name="submit">
+        <ul id="register-step-2" style="display:none;">
+            <li>Date of Birth: <input type="date" name="birthDate" required></li>
+            <li>
+                Gender:
+                <select name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="nonbinary">Nonbinary</option>
+                    <option value="other">Other</option>
+                </select>
+            </li>
+            <li>
+                Interested In:
+                <select name="genderAttraction" required>
+                    <option value="male">Men</option>
+                    <option value="female">Women</option>
+                    <option value="nonbinary">Nonbinary</option>
+                    <option value="all">All</option>
+                </select>
+            </li>
+            <li>
+                Age Range:
+                <input type="number" name="ageMin" min="18" max="99" value="18" required style="width:60px;"> -
+                <input type="number" name="ageMax" min="18" max="99" value="99" required style="width:60px;">
+            </li>
+        </ul>
+        <ul id="register-step-3" style="display:none;">
+            <li>
+                <label>Profile Photo:</label>
+                <div id="photo-upload-circle" >
+                    <input type="file" id="profile-photo-input" name="profilePhoto" accept="image/*" style="display:none;">
+                    <span id="profile-photo-icon" >
+                <i class="fa-solid fa-circle-user"></i>
+            </span>
+                    <img id="profile-photo-preview" src="" alt="Preview" >
+                </div>
+                <small>Click the circle to upload a photo or continue with the default.</small>
+            </li>
+        </ul>
+        <div id="register-buttons">
+            <input type="button" id="next-btn" class="submit" value="Next">
+            <input type="button" id="before-btn" class="submit" value="Before" style="display:none;">
+            <input type="button" id="next-photo-btn" class="submit" value="Next" style="display:none;">
+            <input type="submit" id="register-btn" class="submit" value="Register" name="submit" style="display:none;">
+        </div>
     </form>
 </div>

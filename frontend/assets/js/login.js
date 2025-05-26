@@ -13,7 +13,7 @@ class LoginManager {
     }
 
     validateLogin() {
-        const email = this.form.querySelector('input[name="username"]').value.trim();
+        const email = this.form.querySelector('input[name="email"]').value.trim();
         const password = this.form.querySelector('input[name="password"]').value;
 
         if (!email || !password) {
@@ -50,9 +50,8 @@ class LoginManager {
                     this.handleFailedLogin(data.message);
                 }
             })
-            .catch(error => {
+            .catch(() => {
                 this.showError('Connection error. Please try again later.');
-                console.error('Login error:', error);
             });
     }
 
@@ -60,13 +59,12 @@ class LoginManager {
         if (data.token) {
             localStorage.setItem('authToken', data.token);
         }
-        alert("Login was successful");
-        window.location.href = '/dashboard';
+        // Redirect to home or dashboard
+        router.navigate('home');
     }
 
     handleFailedLogin(message) {
         this.attemptCount--;
-
         if (this.attemptCount <= 0) {
             this.showError('Too many failed attempts. Please try again later.');
             this.disableForm();
@@ -78,13 +76,11 @@ class LoginManager {
 
     showError(message) {
         let errorElement = document.querySelector('.login-error');
-
         if (!errorElement) {
             errorElement = document.createElement('div');
             errorElement.className = 'login-error';
             this.form.prepend(errorElement);
         }
-
         errorElement.textContent = message;
         errorElement.style.color = 'red';
         errorElement.style.marginBottom = '10px';
@@ -93,13 +89,15 @@ class LoginManager {
     disableForm() {
         const inputs = this.form.querySelectorAll('input');
         const submitBtn = this.form.querySelector('input[type="submit"]');
-
         inputs.forEach(input => input.disabled = true);
-        submitBtn.disabled = true;
+        if (submitBtn) submitBtn.disabled = true;
     }
 }
 
 // Initialize login manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new LoginManager('form[name="login"]');
+    const loginForm = document.querySelector('form[name="login"]');
+    if (loginForm) {
+        new LoginManager('form[name="login"]');
+    }
 });

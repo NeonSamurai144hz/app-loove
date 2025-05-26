@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sweep - Find Your Perfect Match</title>
-  <link rel="icon" href="/frontend/assets/img/landing.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/frontend/assets/css/landing.css">
-  <link rel="stylesheet" href="/frontend/assets/css/login.css">
-  <link rel="stylesheet" href="/frontend/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/assets/img/landing.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+  <link rel="stylesheet" href="/assets/css/login.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 <body>
 <div id="app">
 </div>
 
-<script src="/frontend/assets/js/router.js"></script>
-<script src="/frontend/assets/js/login.js"></script>
-<script src="/frontend/assets/js/register.js"></script>
-<script src="/frontend/assets/js/app.js"></script>
+<script src="/assets/js/router.js"></script>
+<script src="/assets/js/login.js"></script>
+<script src="/assets/js/register.js"></script>
+<script src="/assets/js/app.js"></script>
 <script>
   const router = new Router();
   router.add('', 'landingPage.html');
-  router.add('home', 'landingPage.html');
+  router.add('home', 'home.html');
   router.add('login', 'login.html');
   router.add('register', 'register.html');
   router.add('profile', 'profile.html');
@@ -30,7 +31,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname === '/' || window.location.pathname === '') {
-      router.navigate('home', false);
+      router.navigate('', false);
     }
   });
 </script>

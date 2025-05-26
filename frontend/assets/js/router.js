@@ -6,13 +6,12 @@ class Router {
     }
 
     init() {
-        // Handle browser navigation events
         window.addEventListener('popstate', () => {
             this.navigate(window.location.pathname.substring(1), false);
         });
 
-        // Handle initial route
-        this.navigate(window.location.pathname.substring(1) || 'home', false);
+        const initialPath = window.location.pathname.substring(1);
+        this.navigate(initialPath, false);
     }
 
     add(route, template) {
@@ -22,13 +21,7 @@ class Router {
     navigate(path, addToHistory = true) {
         const content = document.getElementById('app');
 
-        // Handle empty path as home/landing page
-        if (path === '') {
-            path = 'home';
-        }
-
-        // Set page-specific body class
-        if (path === 'home') {
+        if (path === '' || path === 'home') {
             document.body.className = 'landing-page';
         } else {
             document.body.className = path + '-page';
@@ -38,32 +31,55 @@ class Router {
             history.pushState({}, '', '/' + path);
         }
 
-        // Check if route exists in our defined routes
-        if (this.routes[path]) {
-            // Use absolute path with leading slash
-            fetch(`/frontend/views/${this.routes[path]}`)
-                .then(res => res.text())
-                .then(html => {
-                    content.innerHTML = html;
-                    this.initViewScripts(path);
+        // Protect these routes
+        const protectedRoutes = ['home', 'profile', 'matches'];
+        if (protectedRoutes.includes(path)) {
+            this.checkAuthAndNavigate(path, () => {
+                this.loadView(path, content);
+            });
+            return;
+        }
 
-                    // Execute any scripts in the loaded content
-                    const scripts = content.querySelectorAll('script');
-                    scripts.forEach(script => {
-                        eval(script.textContent);
-                    });
-                })
-                .catch(err => {
-                    console.error("Failed to load view:", err);
-                    content.innerHTML = "<h1>Page Not Found</h1>";
-                });
+        if (this.routes[path]) {
+            this.loadView(path, content);
         } else {
             content.innerHTML = "<h1>Page Not Found</h1>";
         }
     }
 
+    loadView(path, content) {
+        fetch(`/views/${this.routes[path]}`)
+            .then(res => res.text())
+            .then(html => {
+                content.innerHTML = html;
+                this.initViewScripts(path);
+                const scripts = content.querySelectorAll('script');
+                scripts.forEach(script => {
+                    eval(script.textContent);
+                });
+            })
+            .catch(err => {
+                console.error("Failed to load view:", err);
+                content.innerHTML = "<h1>Page Not Found</h1>";
+            });
+    }
+
+    checkAuthAndNavigate(path, callback) {
+        fetch('/api/auth/me')
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    callback();
+                } else {
+                    this.navigate('login');
+                }
+            })
+            .catch(() => {
+                this.navigate('login');
+            });
+    }
+
     initViewScripts(path) {
-        // Initialize scripts specific to each view
         if (path === 'login') {
             setTimeout(() => {
                 const loginForm = document.querySelector('form[name="login"]');

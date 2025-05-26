@@ -1,2 +1,48 @@
-<h2>Home</h2>
-<p>Welcome to Sweep!</p>
+<div class="home-dashboard">
+    <h2>Welcome back!</h2>
+    <p>Ready to find your next match?</p>
+
+    <div class="match-card">
+        <img src="/assets/img/sample-profile.jpg" alt="Profile photo" class="profile-photo" id="profile-photo">
+        <div class="profile-info">
+            <h3 id="profile-name-age">Name, Age</h3>
+            <p id="profile-location">Location</p>
+            <p id="profile-description">Description</p>
+        </div>
+        <div class="match-actions">
+            <button class="action-btn pass"><i class="fa fa-times"></i> Pass</button>
+            <button class="action-btn like"><i class="fa fa-heart"></i> Like</button>
+            <button class="action-btn view-profile"><i class="fa fa-user"></i> View Profile</button>
+        </div>
+    </div>
+
+    <div class="dashboard-links">
+        <a href="#" onclick="router.navigate('matches'); return false;">View Matches</a> |
+        <a href="#" onclick="router.navigate('profile'); return false;">Edit Profile</a>
+    </div>
+</div>
+<script>
+    function loadUserInfo() {
+        fetch('/api/auth/me')
+            .then(res => res.json())
+            .then(data => {
+                if (data.success && data.user) {
+                    document.querySelector('.home-dashboard h2').textContent = `Welcome back, ${data.user.first_name}!`;
+                    document.getElementById('profile-name-age').textContent = `${data.user.first_name}, ${getAge(data.user.date_birth)}`;
+                    document.getElementById('profile-description').textContent = data.user.description || '';
+                    document.getElementById('profile-photo').src = data.user.photo_url || '/assets/img/sample-profile.jpg';
+                }
+            });
+        function getAge(dateString) {
+            const today = new Date();
+            const birthDate = new Date(dateString);
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+    }
+    document.addEventListener('DOMContentLoaded', loadUserInfo);
+</script>
