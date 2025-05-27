@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/assets/css/home.css">
 <div class="home-dashboard">
     <h2>Welcome back!</h2>
     <p>Ready to find your next match?</p>
@@ -21,34 +22,4 @@
     </div>
     <button id="logout-btn" class="logout-btn">Log Out</button>
 </div>
-<script>
-    document.getElementById('logout-btn').addEventListener('click', function() {
-        fetch('/api/auth/logout', { method: 'POST' })
-            .then(() => {
-                router.navigate('login');
-            });
-    });
-    function loadUserInfo() {
-        fetch('/api/auth/me')
-            .then(res => res.json())
-            .then(data => {
-                if (data.success && data.user) {
-                    document.querySelector('.home-dashboard h2').textContent = `Welcome back, ${data.user.first_name}!`;
-                    document.getElementById('profile-name-age').textContent = `${data.user.first_name}, ${getAge(data.user.date_birth)}`;
-                    document.getElementById('profile-description').textContent = data.user.description || '';
-                    document.getElementById('profile-photo').src = data.user.pfp_path || '/assets/img/sample-profile.jpg';
-                }
-            });
-        function getAge(dateString) {
-            const today = new Date();
-            const birthDate = new Date(dateString);
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            return age;
-        }
-    }
-    if (typeof loadUserInfo === 'function') loadUserInfo();
-</script>
+<script src="/assets/js/home.js"></script>

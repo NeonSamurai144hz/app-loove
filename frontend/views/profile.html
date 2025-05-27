@@ -1,0 +1,64 @@
+<div class="profile-edit-container">
+    <h2>Edit Profile</h2>
+    <form id="edit-profile-form" enctype="multipart/form-data">
+        <div>
+            <label>First Name:</label>
+            <input type="text" name="first_name" required>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type="text" name="last_name" required>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label>Date of Birth:</label>
+            <input type="date" name="date_birth" required>
+        </div>
+        <div>
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonbinary">Nonbinary</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label>Attracted to:</label>
+            <select name="gender_attraction" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonbinary">Nonbinary</option>
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div>
+            <label>Age Attraction Min:</label>
+            <input type="number" name="age_attraction_min" min="18" max="99" required>
+        </div>
+        <div>
+            <label>Age Attraction Max:</label>
+            <input type="number" name="age_attraction_max" min="18" max="99" required>
+        </div>
+        <div>
+            <label>Description:</label>
+            <textarea name="description"></textarea>
+        </div>
+        <div>
+            <label>Profile Photo:</label>
+            <input type="file" name="profilePhoto" accept="image/*">
+            <img id="profile-photo-preview" src="" alt="Profile Photo" style="max-width:100px;display:none;">
+        </div>
+        <button type="submit">Save Changes</button>
+        <div class="profile-edit-error"></div>
+    </form>
+</div>
+<script src="/assets/js/profile.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof window.initProfileEdit === 'function') window.initProfileEdit();
+    });
+</script>
