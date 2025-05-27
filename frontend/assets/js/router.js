@@ -98,6 +98,13 @@ class Router {
             setTimeout(() => {
                 if (typeof loadUserInfo === 'function') loadUserInfo();
             }, 100);
+        } else if (path === 'profile') {
+            setTimeout(() => {
+                const form = document.getElementById('edit-profile-form');
+                if (form && typeof window.initProfileEdit === 'function') {
+                    window.initProfileEdit();
+                }
+            }, 100);
         }
     }
 }
