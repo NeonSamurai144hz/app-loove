@@ -86,6 +86,15 @@ if ($url === 'auth/login') {
    } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(['error' => 'Internal server error', 'message' => $e->getMessage()]);}
+} else if ($url === 'auth/logout') {
+    error_log("Routing to logout\n", 3, __DIR__ . '/debug.log');
+    try {
+        $controller = new \App\Controllers\AuthController(Database::getInstance());
+        $controller->logout();
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Internal server error', 'message' => $e->getMessage()]);
+    }
 } else {
     error_log("404 - endpoint '$url' not found\n", 3, __DIR__ . '/debug.log');
     http_response_code(404);

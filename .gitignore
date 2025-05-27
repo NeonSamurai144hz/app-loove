@@ -3,3 +3,5 @@ composer.lock
 /vendor/
 frontend/uploads
 uploads/
+.idea
+/.idea

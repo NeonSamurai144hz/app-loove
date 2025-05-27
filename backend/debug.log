@@ -1,0 +1,4042 @@
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+api.php: Start
+api.php: URL = 
+api.php: 404 - endpoint not found
+frontend/api.php: Start
+frontend/api.php: URL = ''
+frontend/api.php: GET params: Array
+(
+)
+
+frontend/api.php: REQUEST_URI: /api/auth/register
+frontend/api.php: 404 - endpoint '' not found
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: 
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirmPassword": "password123"
+}
+Error creating AuthController for register: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+=== DEBUG END ===
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirm_password": "password123"
+}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirm_password": "password123"
+}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirmPassword": "password123"
+}
+AuthController: User registered successfully - ID: 2
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {"firstName":"Nikita","lastName":"Bobeica","email":"nikita.bobeica@coda-student.school","password":"777777","confirmPassword":"777777"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {"firstName":"Nikita","lastName":"Bobeica","email":"office.kanebo@gmail.com","password":"111111","confirmPassword":"111111"}
+AuthController: User registered successfully - ID: 3
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {"firstName":"Nikita","lastName":"Bobeica","email":"ssggbobeica@gmail.com","password":"123456","confirmPassword":"123456"}
+AuthController: User registered successfully - ID: 4
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"ssggbobeica@gmail.com","password":"123456"}
+AuthController: Login successful for user ID: 4
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@example.com",
+  "password": "securePass123",
+  "confirmPassword": "securePass123",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+AuthController: User registered successfully - ID: 5
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {"firstName":"Nikita","lastName":"Bobeica","email":"niki.bobeica@gmail.com","password":"adminnikita","confirmPassword":"adminnikita","birthDate":"2025-05-06","gender":"male","genderAttraction":"female","ageMin":"18","ageMax":"98"}
+AuthController: User registered successfully - ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminikita"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@example.com",
+  "password": "securePass123",
+  "confirmPassword": "securePass123",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: 
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: 
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: User registered successfully - ID: 7
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: User registered successfully - ID: 8
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+AuthController: Raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@example.com",
+  "password": "securePass123",
+  "confirmPassword": "securePass123",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@example.com",
+  "password": "securePass123",
+  "confirmPassword": "securePass123",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+AuthController: Login successful for user ID: 5
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"niki.bobeica@gmail.com","password":"adminnikita"}
+AuthController: Login successful for user ID: 6
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "the@example.com",
+  "password": "bettersite",
+  "confirmPassword": "bettersite",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "email": "alice.smith@example.com",
+  "password": "securePass123",
+  "confirmPassword": "securePass123",
+  "birthDate": "1995-04-15",
+  "gender": "female",
+  "genderAttraction": "male",
+  "ageMin": 22,
+  "ageMax": 35
+}
+AuthController: Login successful for user ID: 5
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"efwvw.bobeica@coda-student.school","password":"123456"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"efwvw.bobeica@coda-student.school","password":"adminnikita"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"efwvw.bobeica@coda-student.school","password":"adminnikita"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"efwvw.bobeica@coda-student.school","password":"adminnikita"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"efwvw.bobeica@coda-student.school","password":"adminnikita"}
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"admin@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 9
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"admin@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 9
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"ttggbobeica@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 10
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"samson@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 11
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"sggbobeica@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 12
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"ofice.kanebo@gmail.com","password":"adminadmin"}
+AuthController: Login successful for user ID: 13
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"nikita.bobeica@coda-student.school","password":"adminadmin"}
+AuthController: Login successful for user ID: 14
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"nikita.bobeica@coda-student.school","password":"adminadmin"}
+AuthController: Login successful for user ID: 15
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/logout
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/logout
+Manually extracted URL: 'auth/logout'
+Final URL after processing: 'auth/logout'
+Routing to logout
+=== DEBUG START ===
+REQUEST_URI: /api/auth/register
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/register
+Manually extracted URL: 'auth/register'
+Final URL after processing: 'auth/register'
+Routing to register
+AuthController: register() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/login
+REQUEST_METHOD: POST
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/login
+Manually extracted URL: 'auth/login'
+Final URL after processing: 'auth/login'
+Routing to login
+AuthController: login() called
+AuthController: Login raw input: {"email":"nikita.bobeica@coda-student.school","password":"adminadmin"}
+AuthController: Login successful for user ID: 16
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called
+=== DEBUG START ===
+REQUEST_URI: /api/auth/me
+REQUEST_METHOD: GET
+SCRIPT_NAME: /api.php
+All GET params: Array
+(
+)
+
+All SERVER vars (relevant): 
+  HTTP_HOST: sweep.local
+  SERVER_NAME: sweep.local
+  DOCUMENT_ROOT: C:/Coding/Dating-app/app-loove/frontend
+ERROR: .htaccess rewrite not working - 'url' parameter not found in GET
+Trying to manually parse REQUEST_URI: /api/auth/me
+Manually extracted URL: 'auth/me'
+Final URL after processing: 'auth/me'
+Routing to me
+AuthController: me() called

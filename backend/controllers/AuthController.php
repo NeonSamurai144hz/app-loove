@@ -63,6 +63,8 @@ class AuthController {
         ]);
     }
 
+    // app-loove/backend/controllers/AuthController.php
+
     public function register() {
         error_log("AuthController: register() called\n", 3, __DIR__ . '/../debug.log');
 
@@ -113,8 +115,7 @@ class AuthController {
             $this->respondJson(['success' => false, 'message' => 'Email already registered'], 409);
         }
 
-        // File validation
-        $photoPath = null;
+        $pfpPathForDb = null;
         if ($file && $file['error'] === UPLOAD_ERR_OK) {
             $maxFileSize = 2 * 1024 * 1024; // 2MB
             $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -128,14 +129,18 @@ class AuthController {
             if (!in_array($mimeType, $allowedTypes)) {
                 $this->respondJson(['success' => false, 'message' => 'Invalid image type'], 400);
             }
+
             $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-            $filename = uniqid('pfp_', true) . '.' . $ext;
-            $uploadDir = __DIR__ . '/../../uploads/';
+            $filename = uniqid('profile_', true) . '.' . $ext;
+            $uploadDir = 'C:/Coding/Dating-app/app-loove/frontend/uploads/';
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0777, true);
             }
             $photoPath = $uploadDir . $filename;
-            move_uploaded_file($file['tmp_name'], $photoPath);
+            if (!move_uploaded_file($file['tmp_name'], $photoPath)) {
+                $this->respondJson(['success' => false, 'message' => 'Failed to upload profile photo'], 500);
+            }
+            $pfpPathForDb = '/uploads/' . $filename;
         }
 
         $userId = \App\Models\User::create([
@@ -148,7 +153,7 @@ class AuthController {
             'gender_attraction' => $data['genderAttraction'] ?? null,
             'age_attraction_min' => $data['ageMin'] ?? 18,
             'age_attraction_max' => $data['ageMax'] ?? 99,
-            'pfp_path' => $photoPath
+            'pfp_path' => $pfpPathForDb
         ]);
 
         if ($userId) {
@@ -171,9 +176,11 @@ class AuthController {
             return;
         }
         unset($user['password']);
-        $user['photo_url'] = $user['pfp_path']
-            ? '/uploads/' . basename($user['pfp_path'])
-            : '/assets/img/sample-profile.jpg';
+        // Only return pfp_path, not photo_url
+        if (!$user['pfp_path']) {
+            $user['pfp_path'] = '/assets/img/sample-profile.jpg';
+        }
+        unset($user['photo_url']);
         $this->respondJson(['success' => true, 'user' => $user]);
     }
 
@@ -191,5 +198,11 @@ class AuthController {
         header('Content-Type: application/json');
         echo json_encode($data);
         exit();
+    }
+    public function logout() {
+        session_start();
+        session_unset();
+        session_destroy();
+        $this->respondJson(['success' => true]);
     }
 }

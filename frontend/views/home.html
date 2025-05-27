@@ -10,18 +10,24 @@
             <p id="profile-description">Description</p>
         </div>
         <div class="match-actions">
-            <button class="action-btn pass"><i class="fa fa-times"></i> Pass</button>
-            <button class="action-btn like"><i class="fa fa-heart"></i> Like</button>
-            <button class="action-btn view-profile"><i class="fa fa-user"></i> View Profile</button>
+<!--            <button class="action-btn pass"><i class="fa fa-times"></i> Pass</button>-->
+<!--            <button class="action-btn like"><i class="fa fa-heart"></i> Like</button>-->
+<!--            <button class="action-btn view-profile"><i class="fa fa-user"></i> View Profile</button>-->
         </div>
     </div>
-
     <div class="dashboard-links">
         <a href="#" onclick="router.navigate('matches'); return false;">View Matches</a> |
         <a href="#" onclick="router.navigate('profile'); return false;">Edit Profile</a>
     </div>
+    <button id="logout-btn" class="logout-btn">Log Out</button>
 </div>
 <script>
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        fetch('/api/auth/logout', { method: 'POST' })
+            .then(() => {
+                router.navigate('login');
+            });
+    });
     function loadUserInfo() {
         fetch('/api/auth/me')
             .then(res => res.json())
@@ -30,7 +36,7 @@
                     document.querySelector('.home-dashboard h2').textContent = `Welcome back, ${data.user.first_name}!`;
                     document.getElementById('profile-name-age').textContent = `${data.user.first_name}, ${getAge(data.user.date_birth)}`;
                     document.getElementById('profile-description').textContent = data.user.description || '';
-                    document.getElementById('profile-photo').src = data.user.photo_url || '/assets/img/sample-profile.jpg';
+                    document.getElementById('profile-photo').src = data.user.pfp_path || '/assets/img/sample-profile.jpg';
                 }
             });
         function getAge(dateString) {
@@ -44,5 +50,5 @@
             return age;
         }
     }
-    document.addEventListener('DOMContentLoaded', loadUserInfo);
+    if (typeof loadUserInfo === 'function') loadUserInfo();
 </script>

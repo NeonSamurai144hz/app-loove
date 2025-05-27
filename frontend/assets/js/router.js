@@ -94,6 +94,10 @@ class Router {
                     new RegisterManager('form[name="register"]');
                 }
             }, 100);
+        } else if (path === 'home') {
+            setTimeout(() => {
+                if (typeof loadUserInfo === 'function') loadUserInfo();
+            }, 100);
         }
     }
 }
