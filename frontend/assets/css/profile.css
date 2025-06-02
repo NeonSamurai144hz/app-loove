@@ -1,0 +1,133 @@
+/* app-loove/frontend/assets/css/profile.css */
+.profile-edit-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.profile-edit-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #0F1BFF;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#edit-profile-form > div {
+    margin-bottom: 18px;
+}
+
+#edit-profile-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#edit-profile-form input[type="text"],
+#edit-profile-form input[type="email"],
+#edit-profile-form input[type="date"],
+#edit-profile-form input[type="number"],
+#edit-profile-form select,
+#edit-profile-form textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fafbfc;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+#edit-profile-form input:focus,
+#edit-profile-form select:focus,
+#edit-profile-form textarea:focus {
+    border-color: #0F1BFF;
+    outline: none;
+}
+
+#edit-profile-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+#edit-profile-form input[type="file"] {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+#profile-photo-preview {
+    display: block;
+    margin-top: 8px;
+    border-radius: 50%;
+    border: 2px solid #0F1BFF;
+    max-width: 90px;
+    max-height: 90px;
+    object-fit: cover;
+    background: #f3f3f3;
+}
+
+/* Profile page submit button smooth hover */
+#edit-profile-form button[type="submit"] {
+    background: #0a128f; /* darker blue */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s cubic-bezier(0.4,0,0.2,1),
+    color 0.25s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.25s cubic-bezier(0.4,0,0.2,1),
+    transform 0.18s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 2px 8px rgba(15,27,255,0.08);
+}
+
+#edit-profile-form button[type="submit"]:hover {
+    background: #1a2bb8; /* slightly lighter but still dark blue */
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 18px rgba(15,27,255,0.15);
+}
+
+/*css for the cancel button*/
+#edit-profile-form button[type="submit"],
+#edit-profile-form #cancel-profile-btn {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 6px;
+    background: #0F1BFF;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-right: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(15,27,255,0.08);
+    display: block;
+}
+
+#edit-profile-form #cancel-profile-btn {
+    background: #888;
+    margin-top: 10px;
+}
+
+#edit-profile-form #cancel-profile-btn:hover {
+    background: #555;
+}
+.profile-edit-error {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 15px;
+    min-height: 20px;
+}
