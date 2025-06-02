@@ -1,5 +1,4 @@
 <?php
-// frontend/api.php - Debug Version
 error_log("=== DEBUG START ===\n", 3, __DIR__ . '/debug.log');
 error_log("REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n", 3, __DIR__ . '/debug.log');
 error_log("REQUEST_METHOD: " . $_SERVER['REQUEST_METHOD'] . "\n", 3, __DIR__ . '/debug.log');
@@ -10,22 +9,19 @@ error_log("  HTTP_HOST: " . ($_SERVER['HTTP_HOST'] ?? 'not set') . "\n", 3, __DI
 error_log("  SERVER_NAME: " . ($_SERVER['SERVER_NAME'] ?? 'not set') . "\n", 3, __DIR__ . '/debug.log');
 error_log("  DOCUMENT_ROOT: " . ($_SERVER['DOCUMENT_ROOT'] ?? 'not set') . "\n", 3, __DIR__ . '/debug.log');
 
-// Check if .htaccess is working
+// check if .htaccess is working
 if (!isset($_GET['url'])) {
     error_log("ERROR: .htaccess rewrite not working - 'url' parameter not found in GET\n", 3, __DIR__ . '/debug.log');
 
-    // Try to manually parse the URL
     $request_uri = $_SERVER['REQUEST_URI'];
     error_log("Trying to manually parse REQUEST_URI: $request_uri\n", 3, __DIR__ . '/debug.log');
 
-    // Remove query string if present
     if (($pos = strpos($request_uri, '?')) !== false) {
         $request_uri = substr($request_uri, 0, $pos);
     }
 
-    // Check if it starts with /api/
     if (strpos($request_uri, '/api/') === 0) {
-        $url = substr($request_uri, 5); // Remove '/api/' prefix
+        $url = substr($request_uri, 5); // Remove '/api/'
         error_log("Manually extracted URL: '$url'\n", 3, __DIR__ . '/debug.log');
     } else {
         $url = '';
@@ -41,9 +37,6 @@ error_log("Final URL after processing: '$url'\n", 3, __DIR__ . '/debug.log');
 
 // Include backend files
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../backend/Database.php';
-require_once __DIR__ . '/../backend/models/User.php';
-require_once __DIR__ . '/../backend/controllers/AuthController.php';
 
 // Set headers
 header('Content-Type: application/json');
@@ -61,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 if ($url === 'auth/login') {
     error_log("Routing to login\n", 3, __DIR__ . '/debug.log');
     try {
-        $controller = new \App\Controllers\AuthController(Database::getInstance());
+        $controller = new \App\Controllers\AuthController(\App\Database::getInstance());
         $controller->login();
     } catch (Exception $e) {
         error_log("Error creating AuthController for login: " . $e->getMessage() . "\n", 3, __DIR__ . '/debug.log');
@@ -71,7 +64,7 @@ if ($url === 'auth/login') {
 } else if ($url === 'auth/register') {
     error_log("Routing to register\n", 3, __DIR__ . '/debug.log');
     try {
-        $controller = new \App\Controllers\AuthController(Database::getInstance());
+        $controller = new \App\Controllers\AuthController(\App\Database::getInstance());
         $controller->register();
     } catch (Exception $e) {
         error_log("Error creating AuthController for register: " . $e->getMessage() . "\n", 3, __DIR__ . '/debug.log');
@@ -79,22 +72,28 @@ if ($url === 'auth/login') {
         echo json_encode(['error' => 'Internal server error', 'message' => $e->getMessage()]);
     }
 } else if ($url === 'auth/me') {
-     error_log("Routing to me\n", 3, __DIR__ . '/debug.log');
-     try {
-        $controller = new \App\Controllers\AuthController(Database::getInstance());
+    error_log("Routing to me\n", 3, __DIR__ . '/debug.log');
+    try {
+        $controller = new \App\Controllers\AuthController(\App\Database::getInstance());
         $controller->me();
-   } catch (Exception $e) {
+    } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(['error' => 'Internal server error', 'message' => $e->getMessage()]);}
 } else if ($url === 'auth/logout') {
     error_log("Routing to logout\n", 3, __DIR__ . '/debug.log');
     try {
-        $controller = new \App\Controllers\AuthController(Database::getInstance());
+        $controller = new \App\Controllers\AuthController(\App\Database::getInstance());
         $controller->logout();
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(['error' => 'Internal server error', 'message' => $e->getMessage()]);
     }
+} else if ($url === 'auth/updateProfile') {
+    $controller = new \App\Controllers\ProfileController(\App\Database::getInstance());
+    $controller->updateProfile();
+} else if ($url === 'matches') {
+    $controller = new \App\Controllers\MatchController(\App\Database::getInstance());
+    $controller->matches();
 } else {
     error_log("404 - endpoint '$url' not found\n", 3, __DIR__ . '/debug.log');
     http_response_code(404);

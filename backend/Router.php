@@ -1,4 +1,6 @@
 <?php
+namespace App;
+
 class Router {
     public function route(string $url) {
         require_once __DIR__ . '/../vendor/autoload.php';
