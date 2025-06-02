@@ -1,3 +1,5 @@
+// app-loove/frontend/assets/js/register.js
+
 class RegisterManager {
     constructor(formSelector) {
         this.form = document.querySelector(formSelector);
@@ -17,6 +19,21 @@ class RegisterManager {
         this.photoIcon = this.form.querySelector('#profile-photo-icon');
         this.photoPreview = this.form.querySelector('#profile-photo-preview');
         this.initEventListeners();
+        // Set required attributes for step 1 only
+        this.setStepRequired(this.step1, true);
+        this.setStepRequired(this.step2, false);
+        this.setStepRequired(this.step3, false);
+    }
+
+    setStepRequired(step, required) {
+        if (!step) return;
+        step.querySelectorAll('input, select, textarea').forEach(el => {
+            if (required) {
+                el.setAttribute('required', 'required');
+            } else {
+                el.removeAttribute('required');
+            }
+        });
     }
 
     initEventListeners() {
@@ -60,6 +77,10 @@ class RegisterManager {
             return;
         }
 
+        // Toggle required attributes
+        this.setStepRequired(this.step1, false);
+        this.setStepRequired(this.step2, true);
+
         // Show step 2
         this.step1.style.display = 'none';
         this.nextBtn.style.display = 'none';
@@ -87,6 +108,10 @@ class RegisterManager {
             return;
         }
 
+        // Toggle required attributes
+        this.setStepRequired(this.step2, false);
+        this.setStepRequired(this.step3, true);
+
         // Show step 3
         this.step2.style.display = 'none';
         this.nextPhotoBtn.style.display = 'none';
@@ -100,6 +125,8 @@ class RegisterManager {
     handleBefore() {
         if (this.step3 && this.step3.style.display !== 'none') {
             // Go back to step 2
+            this.setStepRequired(this.step3, false);
+            this.setStepRequired(this.step2, true);
             this.step3.style.display = 'none';
             this.registerBtn.style.display = 'none';
             this.step2.style.display = '';
@@ -107,6 +134,8 @@ class RegisterManager {
             this.beforeBtn.style.display = '';
         } else if (this.step2 && this.step2.style.display !== 'none') {
             // Go back to step 1
+            this.setStepRequired(this.step2, false);
+            this.setStepRequired(this.step1, true);
             this.step2.style.display = 'none';
             this.beforeBtn.style.display = 'none';
             this.nextPhotoBtn.style.display = 'none';

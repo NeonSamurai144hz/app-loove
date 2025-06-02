@@ -60,4 +60,12 @@ window.initProfileEdit = function() {
                 err.style.color = 'red';
             });
     });
+
+    // Add this inside window.initProfileEdit = function() { ... }
+    const cancelBtn = document.getElementById('cancel-profile-btn');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', function() {
+            router.navigate('home');
+        });
+    }
 };

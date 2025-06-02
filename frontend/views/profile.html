@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/assets/css/profile.css">
 <div class="profile-edit-container">
     <h2>Edit Profile</h2>
     <form id="edit-profile-form" enctype="multipart/form-data">
@@ -53,10 +54,10 @@
             <img id="profile-photo-preview" src="" alt="Profile Photo" style="max-width:100px;display:none;">
         </div>
         <button type="submit">Save Changes</button>
+        <button type="button" id="cancel-profile-btn">Cancel</button>
         <div class="profile-edit-error"></div>
     </form>
 </div>
-<script src="/assets/js/profile.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         if (typeof window.initProfileEdit === 'function') window.initProfileEdit();

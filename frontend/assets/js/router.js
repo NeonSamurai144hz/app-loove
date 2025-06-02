@@ -105,6 +105,10 @@ class Router {
                     window.initProfileEdit();
                 }
             }, 100);
+        } else if (path === 'matches') {
+            setTimeout(() => {
+                if (typeof window.loadMatches === 'function') window.loadMatches();
+            }, 100);
         }
     }
 }
