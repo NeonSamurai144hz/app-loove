@@ -14,10 +14,10 @@
 
 <VirtualHost *:80>
     ServerName sweep.local
-    DocumentRoot "C:/Coding/Dating-app/app-loove/frontend" // path to your frontend directory
+    DocumentRoot "C:/Coding/Dating-app/app-loove/frontend"
     SetEnv APPLICATION_ENV "development"
 
-    <Directory "C:/Coding/Dating-app/app-loove/frontend"> // path to your frontend directory
+    <Directory "C:/Coding/Dating-app/app-loove/frontend">
         Options FollowSymLinks MultiViews
         AllowOverride All
         Require all granted
