@@ -6,29 +6,25 @@
   <title>Sweep - Find Your Perfect Match</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="/assets/img/landing.png" type="image/png">
-  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/landing.css">
 </head>
 <body>
 <div id="app">
 </div>
 
+<script src="https://js.pusher.com/8.3.0/pusher.min.js"></script>
 <script src="/assets/js/router.js"></script>
 <script src="/assets/js/app.js"></script>
-<script src="/assets/js/login.js"></script>
-<script src="/assets/js/register.js"></script>
-<script src="/assets/js/home.js"></script>
-<script src="/assets/js/profile.js"></script>
-<script src="/assets/js/matches.js"></script>
 <script>
-  const router = new Router();
+  window.router = new Router();
   router.add('', 'landingPage.html');
   router.add('home', 'home.html');
   router.add('login', 'login.html');
   router.add('register', 'register.html');
   router.add('profile', 'profile.html');
   router.add('matches', 'matches.html');
-  router.add('matches', 'matches.html');
+  router.add('video-chat', 'video-chat.html');
+  router.add('admin', 'admin.html');
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {

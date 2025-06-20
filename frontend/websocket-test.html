@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        button { margin-right: 10px; padding: 8px 16px; }
+        .success { color: green; }
+        .error { color: red; }
+        #output { margin-top: 20px; border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; }
+        input { padding: 8px; width: 300px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+<h1>WebSocket Test</h1>
+<div>
+    <button id="connect">Connect</button>
+    <button id="close">Close Connection</button>
+</div>
+<div style="margin-top: 10px;">
+    <input type="text" id="message-input" placeholder="Enter message or JSON payload">
+    <button id="send">Send Message</button>
+</div>
+<h3>Connection Log:</h3>
+<div id="output"></div>
+
+<script>
+    let socket;
+    const connectBtn = document.getElementById('connect');
+    const sendBtn = document.getElementById('send');
+    const closeBtn = document.getElementById('close');
+    const messageInput = document.getElementById('message-input');
+    const output = document.getElementById('output');
+
+    function log(message, type = 'info') {
+        const p = document.createElement('p');
+        p.textContent = message;
+        if (type === 'error') p.className = 'error';
+        if (type === 'success') p.className = 'success';
+        output.appendChild(p);
+        output.scrollTop = output.scrollHeight;
+    }
+
+    connectBtn.addEventListener('click', () => {
+        try {
+            // Use the same hostname as the current page with port 8080
+            const host = window.location.hostname || 'sweep.local';
+            const wsUrl = `ws://${host}:8080`;
+
+            log(`Attempting to connect to ${wsUrl}...`);
+            socket = new WebSocket(wsUrl);
+
+            socket.onopen = () => {
+                log('WebSocket connection established!', 'success');
+
+                // Automatically send registration message similar to video chat
+                const registerMsg = {
+                    type: 'register',
+                    data: {
+                        userId: 123, // Test user ID
+                        matchId: 456  // Test match ID
+                    }
+                };
+                socket.send(JSON.stringify(registerMsg));
+                log(`Auto-sent registration: ${JSON.stringify(registerMsg)}`);
+            };
+
+            socket.onmessage = (event) => {
+                log(`Message received: ${event.data}`, 'success');
+            };
+
+            socket.onerror = (error) => {
+                log(`WebSocket error: ${error.message || 'undefined'}`, 'error');
+            };
+
+            socket.onclose = () => {
+                log('WebSocket connection closed.');
+            };
+        } catch (err) {
+            log(`Error creating WebSocket: ${err.message}`, 'error');
+        }
+    });
+
+    sendBtn.addEventListener('click', () => {
+        if (!socket || socket.readyState !== WebSocket.OPEN) {
+            log('WebSocket is not connected.', 'error');
+            return;
+        }
+
+        const message = messageInput.value.trim();
+        if (!message) {
+            log('Please enter a message to send.', 'error');
+            return;
+        }
+
+        try {
+            // Try to parse as JSON if it looks like JSON
+            if (message.startsWith('{') && message.endsWith('}')) {
+                const jsonData = JSON.parse(message);
+                socket.send(JSON.stringify(jsonData));
+                log(`Sent JSON: ${message}`);
+            } else {
+                socket.send(message);
+                log(`Sent text: ${message}`);
+            }
+            messageInput.value = '';
+        } catch (err) {
+            log(`Error sending message: ${err.message}`, 'error');
+        }
+    });
+
+    closeBtn.addEventListener('click', () => {
+        if (socket) {
+            socket.close();
+            log('Closing WebSocket connection...');
+        }
+    });
+</script>
+</body>
+</html>

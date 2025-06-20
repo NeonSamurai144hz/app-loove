@@ -1,5 +1,3 @@
-// app-loove/frontend/assets/js/register.js
-
 class RegisterManager {
     constructor(formSelector) {
         this.form = document.querySelector(formSelector);

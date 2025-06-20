@@ -1,24 +1,47 @@
 <link rel="stylesheet" href="/assets/css/home.css">
-<div class="home-dashboard">
-    <h2>Welcome back!</h2>
-    <p>Ready to find your next match?</p>
+<div class="container">
+    <div class="main-content">
+        <div id="mini-app-container">
+            <div class="home-dashboard">
+                <h2>Welcome to Sweep</h2>
+                <p>Find your perfect match through video chat</p>
 
-    <div class="match-card">
-        <img src="/assets/img/sample-profile.jpg" alt="Profile photo" class="profile-photo" id="profile-photo">
-        <div class="profile-info">
-            <h3 id="profile-name-age">Name, Age</h3>
-            <p id="profile-location">Location</p>
-            <p id="profile-description">Description</p>
-        </div>
-        <div class="match-actions">
-<!--            <button class="action-btn pass"><i class="fa fa-times"></i> Pass</button>-->
-<!--            <button class="action-btn like"><i class="fa fa-heart"></i> Like</button>-->
-<!--            <button class="action-btn view-profile"><i class="fa fa-user"></i> View Profile</button>-->
+                <button id="find-match-btn" class="action-btn primary-btn">
+                    <i class="fas fa-video"></i> Find Video Match
+                </button>
+
+                <button id="logout-btn" class="action-btn secondary-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
         </div>
     </div>
-    <div class="dashboard-links">
-        <a href="#" onclick="router.navigate('matches'); return false;">View Matches</a> |
-        <a href="#" onclick="router.navigate('profile'); return false;">Edit Profile</a>
-    </div>
-    <button id="logout-btn" class="logout-btn">Log Out</button>
+    <!-- Navbar will be injected here -->
+    <div id="navbar-placeholder"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle Find Match button
+        document.getElementById('find-match-btn').addEventListener('click', function() {
+            router.navigate('video-chat');
+        });
+
+        // Handle Logout button
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            fetch('/api/auth/logout')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        router.navigate('login');
+                    } else {
+                        alert('Logout failed. Please try again.');
+                    }
+                })
+                .catch(err => {
+                    console.error('Error during logout:', err);
+                    alert('Connection error. Please try again.');
+                });
+        });
+    });
+</script>

@@ -1,0 +1,158 @@
+<link rel="stylesheet" href="/assets/css/admin.css">
+<div class="admin-dashboard">
+    <div class="sidebar">
+        <div class="admin-logo">
+            <img src="/assets/img/logo.png" alt="Sweep Admin">
+            <h2>Admin Panel</h2>
+        </div>
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="#" class="active" data-section="overview">Overview</a></li>
+                <li><a href="#" data-section="users">Users</a></li>
+                <li><a href="#" data-section="reports">Reports</a></li>
+                <li><a href="#" data-section="matches">Matches</a></li>
+                <li><a href="#" data-section="settings">Settings</a></li>
+                <li><a href="#" id="admin-logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div id="overview-section" class="admin-section active">
+            <h1>Dashboard Overview</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p id="total-users">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users Today</h3>
+                    <p id="active-users">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Matches</h3>
+                    <p id="total-matches">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Reports</h3>
+                    <p id="pending-reports">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="users-section" class="admin-section">
+            <h1>User Management</h1>
+            <div class="admin-controls">
+                <input type="text" id="user-search" placeholder="Search users...">
+                <select id="user-filter">
+                    <option value="all">All Users</option>
+                    <option value="active">Active</option>
+                    <option value="suspended">Suspended</option>
+                    <option value="banned">Banned</option>
+                </select>
+            </div>
+            <div class="data-table">
+                <table id="users-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date Joined</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div id="users-pagination" class="pagination"></div>
+            </div>
+        </div>
+
+        <div id="reports-section" class="admin-section">
+            <h1>Reports Management</h1>
+            <div class="admin-controls">
+                <select id="report-filter">
+                    <option value="all">All Reports</option>
+                    <option value="pending">Pending</option>
+                    <option value="resolved">Resolved</option>
+                </select>
+            </div>
+            <div class="data-table">
+                <table id="reports-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Reporter</th>
+                        <th>Reported User</th>
+                        <th>Reason</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div id="reports-pagination" class="pagination"></div>
+            </div>
+        </div>
+
+        <div id="matches-section" class="admin-section">
+            <h1>Matches Overview</h1>
+            <div class="data-table">
+                <table id="matches-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User 1</th>
+                        <th>User 2</th>
+                        <th>Match Date</th>
+                        <th>Messages</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div id="matches-pagination" class="pagination"></div>
+            </div>
+        </div>
+
+        <div id="settings-section" class="admin-section">
+            <h1>System Settings</h1>
+            <form id="settings-form">
+                <div class="settings-group">
+                    <h3>General Settings</h3>
+                    <div class="form-control">
+                        <label>Enable New Registrations</label>
+                        <input type="checkbox" id="allow-registration" checked>
+                    </div>
+                    <div class="form-control">
+                        <label>Maintenance Mode</label>
+                        <input type="checkbox" id="maintenance-mode">
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Matching Settings</h3>
+                    <div class="form-control">
+                        <label>Max Age Difference</label>
+                        <input type="number" id="max-age-diff" min="1" value="20">
+                    </div>
+                    <div class="form-control">
+                        <label>Video Chat Timeout (seconds)</label>
+                        <input type="number" id="video-timeout" min="30" value="120">
+                    </div>
+                </div>
+
+                <button type="submit" class="admin-btn">Save Settings</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/admin.js"></script>

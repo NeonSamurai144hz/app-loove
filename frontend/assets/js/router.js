@@ -1,4 +1,15 @@
-// frontend/assets/js/router.js
+
+function loadScript(src, callback) {
+    if (document.querySelector(`script[src="${src}"]`)) {
+        if (callback) callback();
+        return;
+    }
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => { if (callback) callback(); };
+    document.body.appendChild(script);
+}
+
 class Router {
     constructor() {
         this.routes = {};
@@ -81,34 +92,82 @@ class Router {
 
     initViewScripts(path) {
         if (path === 'login') {
-            setTimeout(() => {
-                const loginForm = document.querySelector('form[name="login"]');
-                if (loginForm) {
-                    new LoginManager('form[name="login"]');
-                }
-            }, 100);
+            loadScript('/assets/js/login.js', () => {
+                setTimeout(() => {
+                    const loginForm = document.querySelector('form[name="login"]');
+                    if (loginForm) new LoginManager('form[name="login"]');
+                }, 100);
+            });
         } else if (path === 'register') {
-            setTimeout(() => {
-                const registerForm = document.querySelector('form[name="register"]');
-                if (registerForm) {
-                    new RegisterManager('form[name="register"]');
-                }
-            }, 100);
+            loadScript('/assets/js/register.js', () => {
+                setTimeout(() => {
+                    const registerForm = document.querySelector('form[name="register"]');
+                    if (registerForm) new RegisterManager('form[name="register"]');
+                }, 100);
+            });
         } else if (path === 'home') {
-            setTimeout(() => {
-                if (typeof loadUserInfo === 'function') loadUserInfo();
-            }, 100);
+            loadScript('/assets/js/home.js', () => {
+                setTimeout(() => {
+                    if (document.getElementById('navbar-placeholder')) {
+                        new HomeManager();
+                    }
+                }, 50);
+            });
         } else if (path === 'profile') {
-            setTimeout(() => {
-                const form = document.getElementById('edit-profile-form');
-                if (form && typeof window.initProfileEdit === 'function') {
-                    window.initProfileEdit();
-                }
-            }, 100);
+            loadScript('/assets/js/profile.js', () => {
+                setTimeout(() => {
+                    const form = document.getElementById('edit-profile-form');
+                    if (form && typeof window.initProfileEdit === 'function') {
+                        window.initProfileEdit();
+                    }
+                }, 100);
+            });
+        } else if (path === 'messages') {
+            loadScript('/assets/js/chat.js', () => {
+                loadScript('/assets/js/recommendedMatches.js', () => {
+                    setTimeout(() => {
+                        if (
+                            typeof window.RecommendedMatches === 'function' &&
+                            document.getElementById('recommended-matches')
+                        ) {
+                            window.recommendedMatchesInstance = new RecommendedMatches();
+                            console.log('RecommendedMatches instance created');
+                        } else {
+                            console.log('RecommendedMatches class or container not found');
+                        }
+                    }, 600); // Increased delay
+                });
+            });
+        } else if (path === 'chats') {
+            loadScript('/assets/js/chat.js', () => {
+                loadScript('/assets/js/recommendedMatches.js', () => {
+                    setTimeout(() => {
+                        if (
+                            typeof window.RecommendedMatches === 'function' &&
+                            document.getElementById('recommended-matches')
+                        ) {
+                            window.recommendedMatchesInstance = new RecommendedMatches();
+                            console.log('RecommendedMatches instance created');
+                        } else {
+                            console.log('RecommendedMatches class or container not found');
+                        }
+                    }, 600);
+                });
+            });
         } else if (path === 'matches') {
-            setTimeout(() => {
-                if (typeof window.loadMatches === 'function') window.loadMatches();
-            }, 100);
+            loadScript('/assets/js/matches.js', () => {
+                setTimeout(() => {
+                    if (typeof window.loadMatches === 'function') window.loadMatches();
+                }, 100);
+            });
+        } else if (path === 'video-chat') {
+            loadScript('/assets/js/video-chat.js', () => {
+                setTimeout(() => {
+                    if (typeof window.VideoChatManager === 'function') {
+                        new VideoChatManager();
+                    }
+                }, 100);
+            });
         }
     }
 }

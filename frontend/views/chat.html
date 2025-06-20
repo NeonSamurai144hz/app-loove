@@ -1,0 +1,71 @@
+
+<link rel="stylesheet" href="/assets/css/chat.css">
+<link rel="stylesheet" href="/assets/css/recommendedMatches.css">
+<div class="chat-container">
+    <div class="chat-sidebar">
+        <div class="chat-header">
+            <h2>Messages</h2>
+            <div class="chat-actions">
+                <button id="refresh-chats" title="Refresh">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-list" id="chat-list">
+
+            <!-- Recommended matches section -->
+            <div class="recommended-matches-section">
+                <div class="section-header">
+                    <h3>Recommended For You</h3>
+                    <button id="refresh-recommended-btn" title="Refresh">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+                <div id="recommended-loading" class="loading-state">Loading recommended matches...</div>
+                <div id="recommended-empty" class="empty-state" style="display: none;">No recommended matches found.</div>
+                <div id="recommended-matches-list" class="chat-items"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-main" id="chat-main">
+        <div class="chat-welcome">
+            <h3>Select a conversation to start chatting</h3>
+        </div>
+
+        <div class="chat-header" id="active-chat-header" style="display: none;">
+            <div class="chat-avatar">
+                <img id="chat-avatar" src="" alt="">
+            </div>
+            <div class="chat-info">
+                <h3 id="chat-name"></h3>
+                <span id="chat-status"></span>
+            </div>
+            <div class="chat-actions">
+                <button id="video-call-btn" title="Video Call">
+                    <i class="fas fa-video"></i>
+                </button>
+                <button id="chat-menu-btn" title="Menu">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="message-container" id="message-container" style="display: none;">
+            <div id="loading-indicator" class="loading-indicator">Loading messages...</div>
+            <div id="typing-indicator" class="typing-indicator" style="display: none;">
+                <span>Someone is typing...</span>
+            </div>
+        </div>
+
+        <div class="message-form-container" id="message-form-container" style="display: none;">
+            <form id="message-form" class="message-form">
+                <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                <button type="submit" id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

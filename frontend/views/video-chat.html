@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/assets/css/video-chat.css">
+
+<!-- Matching state overlay -->
+<div id="matching-overlay">
+  <div class="matching-content">
+    <div class="spinner"></div>
+    <h2 id="matching-status">Finding your match...</h2>
+    <p id="matching-message">This may take a few moments</p>
+    <button id="cancel-match-btn" class="cancel-btn">Cancel</button>
+  </div>
+</div>
+
+<!-- Video Chat Container (initially hidden) -->
+<div id="video-chat-container" class="hidden">
+  <div class="video-grid">
+    <div class="video-wrapper local-video-wrapper">
+      <video id="local-video" autoplay muted></video>
+      <div class="video-name">You</div>
+      <div class="audio-meter">
+        <div class="audio-level"></div>
+      </div>
+    </div>
+    <div class="video-wrapper remote-video-wrapper">
+      <video id="remote-video" autoplay></video>
+      <div class="video-name" id="remote-name">Connecting...</div>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="toggle-audio" class="control-btn"><i class="fa fa-microphone"></i></button>
+    <button id="toggle-video" class="control-btn"><i class="fa fa-video"></i></button>
+    <button id="end-call" class="control-btn end-call"><i class="fa fa-phone"></i></button>
+  </div>
+</div>
